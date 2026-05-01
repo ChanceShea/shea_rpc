@@ -25,6 +25,7 @@ public class RpcApplication {
         try {
             newRpcConfig = ConfigUtils.loadConfig(RpcConfig.class, RpcConstant.DEFAULT_CONFIG_PREFIX);
         } catch (Exception e) {
+            log.error("rpc init error", e);
             newRpcConfig = new RpcConfig();
         }
         init(newRpcConfig);

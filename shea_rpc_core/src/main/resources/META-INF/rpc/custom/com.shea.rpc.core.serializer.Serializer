@@ -1,0 +1,2 @@
+json=com.shea.rpc.core.serializer.JsonSerializer
+kryo=com.shea.rpc.core.serializer.KryoSerializer

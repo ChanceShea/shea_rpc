@@ -1,6 +1,8 @@
 package com.shea.rpc.core.serializer;
 
 import cn.hutool.json.JSONUtil;
+import com.alibaba.fastjson2.JSONObject;
+import com.alibaba.fastjson2.JSONReader;
 
 import java.nio.charset.StandardCharsets;
 
@@ -24,6 +26,6 @@ public class JdkSerializer implements Serializer {
             return null;
         }
         String json = new String(bytes, StandardCharsets.UTF_8);
-        return JSONUtil.toBean(json, clazz);
+        return JSONObject.parseObject(json, clazz, JSONReader.Feature.SupportClassForName);
     }
 }

@@ -19,7 +19,7 @@ public class ConfigUtils {
         if (StrUtil.isNotBlank(environment)) {
             configFileBuilder.append("-").append(environment);
         }
-        configFileBuilder.append(".yml");
+        configFileBuilder.append(".properties");
         Props props = new Props(configFileBuilder.toString());
         return props.toBean(clazz,prefix);
     }

@@ -1,0 +1,3 @@
+jdk=com.shea.rpc.core.serializer.JdkSerializer
+hessian=com.shea.rpc.core.serializer.HessianSerializer
+
